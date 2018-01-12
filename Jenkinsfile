@@ -19,6 +19,7 @@ pipeline {
     stage('Clean') {
       steps {
         echo 'Cleaning Up In Progress 1520....'
+        echo 'Clean 123'
       }
     }
   }
