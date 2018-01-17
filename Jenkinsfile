@@ -28,8 +28,22 @@ pipeline {
       }
     }
     stage('Validate') {
-      steps {
-        echo 'Perform Validation'
+      parallel {
+        stage('Validate') {
+          steps {
+            echo 'Perform Validation'
+          }
+        }
+        stage('Database') {
+          steps {
+            echo 'Database Validation'
+          }
+        }
+        stage('Web Tier') {
+          steps {
+            echo 'Web Validation'
+          }
+        }
       }
     }
     stage('Clean-up') {
