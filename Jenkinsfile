@@ -16,6 +16,8 @@ pipeline {
         stage('Database Deployment') {
           steps {
             echo 'Deploy Database'
+            echo 'Run DDL Statments'
+            echo 'Run DML Statements'
           }
         }
         stage('Deploy Web Application') {
